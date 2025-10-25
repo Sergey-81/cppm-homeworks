@@ -31,47 +31,48 @@ int main() {
     std::string answer;
     int initial_value;
 
-    std::cout << "Âû õîòèòå óêàçàòü íà÷àëüíîå çíà÷åíèå ñ÷¸ò÷èêà? Ââåäèòå äà èëè íåò: ";
+    std::cout << "Ğ’Ñ‹ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ ÑƒĞºĞ°Ğ·Ğ°Ñ‚ÑŒ Ğ½Ğ°Ñ‡Ğ°Ğ»ÑŒĞ½Ğ¾Ğµ Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸Ğµ ÑÑ‡Ñ‘Ñ‚Ñ‡Ğ¸ĞºĞ°? Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ´Ğ° Ğ¸Ğ»Ğ¸ Ğ½ĞµÑ‚: ";
     std::cin >> answer;
 
     Counter counter;
 
-    if (answer == "äà" || answer == "Äà" || answer == "ä" || answer == "y" || answer == "yes") {
-        std::cout << "Ââåäèòå íà÷àëüíîå çíà÷åíèå ñ÷¸ò÷èêà: ";
+    if (answer == "Ğ´Ğ°" || answer == "Ğ”Ğ°" || answer == "Ğ´" || answer == "y" || answer == "yes") {
+        std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ½Ğ°Ñ‡Ğ°Ğ»ÑŒĞ½Ğ¾Ğµ Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸Ğµ ÑÑ‡Ñ‘Ñ‚Ñ‡Ğ¸ĞºĞ°: ";
         std::cin >> initial_value;
         counter = Counter(initial_value);
     }
 
     char command;
 
-    std::cout << "Ââåäèòå êîìàíäó ('+', '-', '=' èëè 'x'): ";
+    std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ ĞºĞ¾Ğ¼Ğ°Ğ½Ğ´Ñƒ ('+', '-', '=' Ğ¸Ğ»Ğ¸ 'x'): ";
 
     while (std::cin >> command) {
         switch (command) {
         case '+':
             counter.increment();
-            std::cout << "Ââåäèòå êîìàíäó ('+', '-', '=' èëè 'x'): ";
+            std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ ĞºĞ¾Ğ¼Ğ°Ğ½Ğ´Ñƒ ('+', '-', '=' Ğ¸Ğ»Ğ¸ 'x'): ";
             break;
 
         case '-':
             counter.decrement();
-            std::cout << "Ââåäèòå êîìàíäó ('+', '-', '=' èëè 'x'): ";
+            std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ ĞºĞ¾Ğ¼Ğ°Ğ½Ğ´Ñƒ ('+', '-', '=' Ğ¸Ğ»Ğ¸ 'x'): ";
             break;
 
         case '=':
             std::cout << counter.get_value() << std::endl;
-            std::cout << "Ââåäèòå êîìàíäó ('+', '-', '=' èëè 'x'): ";
+            std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ ĞºĞ¾Ğ¼Ğ°Ğ½Ğ´Ñƒ ('+', '-', '=' Ğ¸Ğ»Ğ¸ 'x'): ";
             break;
 
         case 'x':
-            std::cout << "Äî ñâèäàíèÿ!" << std::endl;
+            std::cout << "Ğ”Ğ¾ ÑĞ²Ğ¸Ğ´Ğ°Ğ½Ğ¸Ñ!" << std::endl;
             return 0;
 
         default:
-            std::cout << "Íåèçâåñòíàÿ êîìàíäà! Ââåäèòå '+', '-', '=' èëè 'x': ";
+            std::cout << "ĞĞµĞ¸Ğ·Ğ²ĞµÑÑ‚Ğ½Ğ°Ñ ĞºĞ¾Ğ¼Ğ°Ğ½Ğ´Ğ°! Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ '+', '-', '=' Ğ¸Ğ»Ğ¸ 'x': ";
             break;
         }
     }
 
     return 0;
 }
+
